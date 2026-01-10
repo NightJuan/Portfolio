@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Cerritos — Portfolio</title>
+    <meta name="description" content="Modern portfolio website for Your Name." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Progress bar -->
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="top">
+      <nav class="nav container" aria-label="Primary">
+        <a class="logo" href="#top">
+          <span class="logo__mark">●</span>
+          <span class="logo__text">Juan Cerritos</span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__links" id="navLinks">
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+          <li>
+            <a class="btn btn--small" href="resume.html">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero container">
+        <div class="hero__content">
+          <p class="eyebrow">Software Engineer • Web Developer</p>
+          <h1>
+            I build clean, fast, modern web experiences.
+          </h1>
+          <p class="lead">
+            I’m <strong>Juan</strong>. I focus on practical, user-first design and solid engineering.
+            Here are a few projects and the skills I’m sharpening right now.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="pill">📍 Joshua, TX</div>
+            <div class="pill">✅ Open to opportunities</div>
+            <div class="pill">💻 HTML • CSS • JS</div>
+          </div>
+        </div>
+
+        <div class="hero__card" role="presentation">
+          <div class="card glass">
+            <div class="card__top">
+              <div class="avatar" aria-hidden="true">JC</div>
+              <div>
+                <p class="card__title">Juan Cerritos</p>
+                <p class="card__sub">Building useful things.</p>
+              </div>
+            </div>
+
+            <div class="card__stats">
+              <div class="stat">
+                <p class="stat__num">10+</p>
+                <p class="stat__label">Projects</p>
+              </div>
+              <div class="stat">
+                <p class="stat__num">4+</p>
+                <p class="stat__label">Years Learning</p>
+              </div>
+              <div class="stat">
+                <p class="stat__num">100%</p>
+                <p class="stat__label">Consistency</p>
+              </div>
+            </div>
+
+            <div class="card__footer">
+              <a class="link" href="#projects">See work →</a>
+              <span class="dot" aria-hidden="true"></span>
+              <a class="link" href="#contact">Hire me →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section container" id="projects">
+        <div class="section__head">
+          <h2>Projects</h2>
+          <p class="muted">A few things I’ve built. Replace these with your real projects.</p>
+        </div>
+
+        <div class="grid projects">
+          <article class="project card">
+            <div class="project__badge">Featured</div>
+            <h3>Portfolio Website</h3>
+            <p class="muted">
+              Responsive portfolio with smooth scrolling, active nav, and clean UI.
+            </p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project__links">
+              <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--small" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+
+          <article class="project card">
+            <h3>Task Tracker</h3>
+            <p class="muted">
+              A simple task app with localStorage persistence and keyboard shortcuts.
+            </p>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">LocalStorage</span>
+              <span class="tag">UI</span>
+            </div>
+            <div class="project__links">
+              <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--small" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+
+          <article class="project card">
+            <h3>API Dashboard</h3>
+            <p class="muted">
+              Fetches data from an API, renders cards, handles loading/error states.
+            </p>
+            <div class="tags">
+              <span class="tag">Fetch</span>
+              <span class="tag">Async</span>
+              <span class="tag">UX</span>
+            </div>
+            <div class="project__links">
+              <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--small" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section container" id="skills">
+        <div class="section__head">
+          <h2>Skills</h2>
+          <p class="muted">Tools and concepts I use and study.</p>
+        </div>
+
+        <div class="grid skills">
+          <div class="card">
+            <h3>Frontend</h3>
+            <ul class="list">
+              <li>HTML5, semantic structure</li>
+              <li>Modern CSS (flex/grid)</li>
+              <li>JavaScript (DOM, fetch, modules)</li>
+              <li>Responsive design</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Backend / Data</h3>
+            <ul class="list">
+              <li>APIs & JSON</li>
+              <li>SQL basics</li>
+              <li>Python fundamentals</li>
+              <li>Auth concepts</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Workflow</h3>
+            <ul class="list">
+              <li>Git & GitHub</li>
+              <li>Debugging and testing</li>
+              <li>Clean code + structure</li>
+              <li>Documentation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section container" id="about">
+        <div class="section__head">
+          <h2>About</h2>
+          <p class="muted">Short, confident, and specific beats long and generic.</p>
+        </div>
+
+        <div class="grid about">
+          <div class="card">
+            <h3>My focus</h3>
+            <p class="muted">
+              I like building projects that feel smooth and intentional—clean layouts, fast load times,
+              and interactions that make sense. I’m currently sharpening JavaScript and building a
+              stronger portfolio.
+            </p>
+            <div class="about__cta">
+              <a class="btn btn--small" href="#projects">See projects</a>
+              <a class="btn btn--small btn--ghost" href="#contact">Let’s talk</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Quick facts</h3>
+            <ul class="list">
+              <li>📍 Based in Texas</li>
+              <li>🎯 Goal: Software Engineer</li>
+              <li>🧠 Learning: JS + Web Apps</li>
+              <li>⚡ Strength: Consistency</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section container" id="contact">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p class="muted">Send a message. This form is front-end only (demo).</p>
+        </div>
+
+        <div class="grid contact">
+          <form class="card form" id="contactForm">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" placeholder="John Doe" required />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" placeholder="johndoe@email.com" required />
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Tell me what you’re building..." required></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send Message</button>
+            <p class="muted small" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="card">
+            <h3>Elsewhere</h3>
+            <div class="stack">
+              <a class="link" href="https://github.com/NightJuan" target="_blank" rel="noopener">GitHub →</a>
+              <a class="link" href="https://www.linkedin.com/in/juan-cerritos-695971288" target="_blank" rel="noopener">LinkedIn →</a>
+              <a class="link" href="mailto:juancerritos69@gmail.com">juancerritos69@gmail.com →</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3>Availability</h3>
+            <p class="muted">
+              I’m open to internships / junior roles and collaborative projects.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer container">
+        <p class="muted small">© <span id="year"></span> Juan Cerritos. Built with HTML/CSS/JS.</p>
+        <a class="link small" href="#top">Back to top ↑</a>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
