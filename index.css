@@ -15,6 +15,7 @@ body {
     flex-direction: row;
     justify-content: end;
     width: 45rem;
+    margin-top: 2rem;
 }
 
 .homeNavigation, .resumeNavigation, .projectsNavigation {
@@ -69,13 +70,18 @@ body {
 /* PAPER */
 .main {
     background-color: #d8c3a5;
+    color: #1d2222;
     position: relative;
     width: 50em;
     height: 65em;
     box-shadow: 0 0 .5rem .1rem rgba(0, 0, 0, 0.14);
-    
     transform-style: preserve-3d;
+    
+    display: flex;
+    flex-direction: column;
+
 }
+
 
 .main::before,
 .main::after {
@@ -90,10 +96,41 @@ body {
 
 .main::before {
     left: 1%;
-    transform: translateZ(-1px); 
+    transform: rotate(.4deg) translateZ(-1px);
 }
 
 .main::after {
     left: 2%;
-    transform: translateZ(-2px); 
+    transform: rotate(.8deg) translateZ(-2px); 
+}
+
+.top-container{
+    background-color: rgba(255, 182, 193, 0);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+
+}
+
+.title-container, .image-container {
+    margin: 2rem;
+}
+
+.title-container{
+    padding-top: 1rem;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+hr {
+    border-color: #7d675951;
+}
+
+img {
+    filter: grayscale();
+    border: solid white;
+    border-bottom: solid 3rem white;
+    transform: rotate(5deg);
 }
