@@ -3,26 +3,97 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* NAVIGATION */
 .navigationBar{
-    background-color: lightblue;
+    /* background-color: lightblue; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: end;
     width: 45rem;
 }
 
 .homeNavigation, .resumeNavigation, .projectsNavigation {
-    background-color: lightcoral;
+    position: relative;
+    margin: 0 1em;
     padding: .7rem;
     padding-bottom: 2rem;
+    z-index: 10;
+}
+
+.homeNavigation{
+    background-color: rgba(240, 128, 128, 0.8);
+}
+
+.resumeNavigation{
+    background-color: rgba(173, 216, 230, 0.70);
+}
+
+.resumeNavigation:hover{
+    background-color: rgb(173, 216, 230);
+}
+
+.projectsNavigation{
+    background-color: rgba(144, 238, 144, 0.7);
+}
+
+.projectsNavigation:hover{
+    background-color: rgb(144, 238, 144);
+}
+
+.tape::after,
+.tape::before {
+    position: absolute;
+    content: '';
+    width: 50.3%;
+    height: 100%;
+    background-color: rgba(240, 128, 128, 0.8);
+    bottom: -99%;
+    clip-path: polygon(0% 0%, 0% 100%, 27% 54%, 50% 100%, 74% 54%, 100% 100%, 100% 0%);
+}
+
+.tape::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 50%);
+    left: 0;
+}
+
+.tape::after {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+    right: 0;
 }
 
 /* PAPER */
-.main{
+.main {
     background-color: #d8c3a5;
-    width: 50rem;
-    height: 55rem;
+    position: relative;
+    width: 50em;
+    height: 65em;
+    box-shadow: 0 0 .5rem .1rem rgba(0, 0, 0, 0.14);
+    
+    transform-style: preserve-3d;
+}
+
+.main::before,
+.main::after {
+    content: '';
+    position: absolute;
+    background-color: #d8c3a5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    box-shadow: 0 0 .5rem .1rem rgba(0, 0, 0, 0.08);
+}
+
+.main::before {
+    left: 1%;
+    transform: translateZ(-1px); 
+}
+
+.main::after {
+    left: 2%;
+    transform: translateZ(-2px); 
 }
