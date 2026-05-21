@@ -1,12 +1,16 @@
 body {
     background-color: #b0a698;
+     background-image:
+        radial-gradient(rgb(255, 0, 0) 1px, transparent 0);
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Pangolin", cursive;
-    font-weight: 400;
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-weight: 700;
     font-style: normal;
 }
+
+
 
 /* NAVIGATION */
 .navigationBar{
@@ -46,8 +50,8 @@ body {
     background-color: rgb(144, 238, 144);
 }
 
-.tape::after,
-.tape::before {
+.bookmark::after,
+.bookmark::before {
     position: absolute;
     content: '';
     width: 50.3%;
@@ -57,15 +61,17 @@ body {
     clip-path: polygon(0% 0%, 0% 100%, 27% 54%, 50% 100%, 74% 54%, 100% 100%, 100% 0%);
 }
 
-.tape::before {
+.bookmark::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 50%);
     left: 0;
 }
 
-.tape::after {
+.bookmark::after {
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
     right: 0;
 }
+
+
 
 /* PAPER */
 .main {
@@ -81,7 +87,6 @@ body {
     flex-direction: column;
 
 }
-
 
 .main::before,
 .main::after {
@@ -104,33 +109,85 @@ body {
     transform: rotate(.8deg) translateZ(-2px); 
 }
 
+
+
+/* Top Container */
 .top-container{
-    background-color: rgba(255, 182, 193, 0);
     display: grid;
     grid-template-columns: 2fr 1fr;
-
-
+    margin-top: 1rem;
 }
 
 .title-container, .image-container {
     margin: 2rem;
 }
 
-.title-container{
-    padding-top: 1rem;
-}
 
-h1, h2 {
+h1, h2, h3 {
     margin: 0;
 }
 
 hr {
     border-color: #7d675951;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* Profile Image */
+.image-container {
+    transform: rotate(5deg);
+    position: relative;
+    display: inline-block;
+}
+
+.image-container::before,
+.image-container::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 243, 204, 0.65);
+    width: 5rem;
+    height: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    z-index: 1;
+}
+
+/* Top-left tape strip */
+.image-container::before {
+    top: -0.7rem;
+    left: -2rem;
+    transform: rotate(-35deg);
+}
+
+/* Bottom-right tape strip */
+.image-container::after {
+    bottom: -0.7rem;
+    right: -2rem;
+    transform: rotate(-40deg);
 }
 
 img {
+    display: block;
+    width: 170px;
+    height: 160px;
+    object-fit: cover;
     filter: grayscale();
-    border: solid white;
+    border: solid 1rem white;
     border-bottom: solid 3rem white;
-    transform: rotate(5deg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.experience-container, .job1{
+    margin: 0 2rem;
+}
+
+.job1{
+    background-color: #a38775;
+    border: solid #4f3d36;
+    border-radius: 0.8rem;
+    padding: 1rem;
+
 }
